@@ -2,13 +2,30 @@ package examen;
 
 import java.util.*;
 
+/**
+ * @author Marcos Martín
+ * @version 1.0
+ */
 public class RockPaperScissors {
-	private static int keyboard = 0;
+	
+	private static int keyboard = 0; // variable que almacena la decision del ussuario en funcion de 1,2,3
+	
 	private static Scanner scanner = new Scanner(System.in);
 
+	/**
+	 * Constructor de la clase RockpaperScissors
+	 * @param No hay parametros
+	 * 
+	 */
 	public RockPaperScissors() {
 	}
 
+	/**
+	 * Método main que hace que el usuario pueda elegir entre Piedra, papel y tijera en funcion de keyboard, la decision del robot se toma en funcion de la del usuario
+	 * @param args
+	 *    array que almacena las posibilidades
+	 * 
+	 */
 	public static void main(String[] args) {
 		List<String> optionList = Arrays.asList("Rock", "Paper", "Scissors");
 		do {
@@ -23,6 +40,17 @@ public class RockPaperScissors {
 		System.out.println(RockPaperScissors.checkGame(userChoice, computerChoice));
 		scanner.close();
 	}
+	
+	/**
+	 * Método checkGame que calcula el resultado del juego piedra, papel y tijeras en funcion de la decision de la maquina y la del usuario
+	 * @param userChoice
+	 *     eleccion del usuario
+	 * @param  computerChoice
+	 *     eleccion de la maquina
+	 * @return gameResult
+	 *     devuleve el resultado del juego en funcion de las elecciones
+	 * 
+	 */
 
 	public static String checkGame(String userChoice, String computerChoice) {
 		String gameResult = "";
